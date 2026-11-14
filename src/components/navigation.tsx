@@ -15,7 +15,7 @@ export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const reduceMotion = useReducedMotion();
   const solid = scrolled || pathname !== "/";
-  const exploreActive = navItems.slice(2, 6).some(
+  const exploreActive = navItems.slice(3, 7).some(
     (item) => pathname === item.href || pathname.startsWith(`${item.href}/`),
   );
 
@@ -52,7 +52,7 @@ export function Navigation() {
         </Link>
 
         <div className="desktop-nav">
-          {navItems.slice(0, 2).map((item) => (
+          {navItems.slice(0, 3).map((item) => (
             <Link
               className={`nav-link ${pathname === item.href || pathname.startsWith(`${item.href}/`) ? "nav-link-active" : ""}`}
               href={item.href}
@@ -67,7 +67,7 @@ export function Navigation() {
               Explore <ChevronDown size={14} aria-hidden="true" />
             </summary>
             <div className="nav-dropdown-panel">
-              {navItems.slice(2, 6).map((item) => (
+              {navItems.slice(3, 7).map((item) => (
                 <Link
                   href={item.href}
                   className="nav-dropdown-link"

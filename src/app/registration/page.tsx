@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Container, Eyebrow, SampleLabel } from "@/components/ui";
-import { homeImage } from "@/data/site";
+import { siteImages } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Registration",
@@ -14,8 +14,8 @@ export default function RegistrationPage() {
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Mountain terrain used as illustrative registration page imagery"
+        image={siteImages.education}
+        imageAlt="Illustrative hands examining a mineral sample"
         eyebrow="Registration"
         title="Find the details before you sign up."
         description="A clear starting point for registration information about courses, activities, and conferences."

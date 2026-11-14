@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { Container, Eyebrow, SectionHeading } from "@/components/ui";
-import { homeImage } from "@/data/site";
+import { siteImages } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Earthquake Safety",
@@ -20,8 +20,8 @@ export default function EarthquakeSafetyPage() {
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Mountain landscape used as illustrative educational page imagery"
+        image={siteImages.safety}
+        imageAlt="Illustrative surface fissure in a rocky landscape"
         eyebrow="Earthquake safety"
         title="Knowledge today. Safer communities tomorrow."
         description="Clear, calm educational information about earthquakes and preparedness. This page is not an emergency alert service."

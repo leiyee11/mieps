@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/page-hero";
 import { ButtonLink, Container, Eyebrow, SampleLabel } from "@/components/ui";
-import { activities, homeImage } from "@/data/site";
+import { activities, siteImages } from "@/data/site";
 import { formatDate } from "@/lib/dates";
 
 export function generateStaticParams() {
@@ -35,8 +35,8 @@ export default async function ActivityDetailPage({
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Earth science landscape used as illustrative event imagery"
+        image={siteImages.education}
+        imageAlt="Illustrative hands examining a mineral sample"
         eyebrow={`Education & activities · ${activity.category}`}
         title={activity.title}
         description={activity.description}

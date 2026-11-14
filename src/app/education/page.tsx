@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ActivityBrowser } from "@/components/activity-browser";
 import { PageHero } from "@/components/page-hero";
 import { Container, SectionHeading } from "@/components/ui";
-import { activities, homeImage } from "@/data/site";
+import { activities, siteImages } from "@/data/site";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ export default function EducationPage() {
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Mountain landscape in soft afternoon light"
+        image={siteImages.education}
+        imageAlt="Illustrative hands examining a mineral sample"
         eyebrow="Education & activities"
         title="Learning about Earth, together."
         description="A place for courses, training, workshops, field trips, seminars, public lectures, and student opportunities."

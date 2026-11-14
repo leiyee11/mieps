@@ -19,6 +19,15 @@ export type Activity = {
   description: string;
 };
 
+export const siteImages = {
+  hero: "/images/hero-karst.jpg",
+  myanmar: "/images/myanmar-lake.jpg",
+  research: "/images/geological-rift.jpg",
+  education: "/images/mineral-sample.jpg",
+  conferences: "/images/rock-strata.jpg",
+  safety: "/images/geological-rift.jpg",
+};
+
 export const researchAreas: ResearchArea[] = [
   {
     slug: "speleology",
@@ -26,9 +35,8 @@ export const researchAreas: ResearchArea[] = [
     short: "Reading the stories held within the underground world.",
     overview:
       "Speleology is the study and exploration of caves and karst landscapes, bringing together geology, hydrology, and careful field observation.",
-    image:
-      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Aerial view of a rugged coastline and deep blue water",
+    image: "/images/speleology-cave.jpg",
+    imageAlt: "Stalactites and mineral formations inside a cave",
     theme: "Karst · Caves · Subsurface",
     objectives: [
       "Document cave and karst environments through field observation.",
@@ -44,9 +52,8 @@ export const researchAreas: ResearchArea[] = [
     short: "Understanding mineral systems and the landscapes they shape.",
     overview:
       "Mining geology examines the origin, distribution, and characteristics of mineral resources, and the geological context in which they occur.",
-    image:
-      "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Layered rock formations in an open geological landscape",
+    image: "/images/mining-geology.jpg",
+    imageAlt: "Terraced rock benches at an open-pit mine",
     theme: "Minerals · Earth materials · Field methods",
     objectives: [
       "Describe geological settings associated with mineral resources.",
@@ -62,9 +69,8 @@ export const researchAreas: ResearchArea[] = [
     short: "Studying earth processes to strengthen public understanding.",
     overview:
       "This field considers geological hazards and the earth processes behind them, supporting education and informed preparedness.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Mountainous landscape viewed from above under a broad sky",
+    image: "/images/geological-rift.jpg",
+    imageAlt: "A long fissure crossing a rocky landscape",
     theme: "Hazards · Earthquakes · Preparedness",
     objectives: [
       "Explain geological processes that can create natural hazards.",
@@ -80,9 +86,8 @@ export const researchAreas: ResearchArea[] = [
     short: "Exploring the relationship between earth resources and ecosystems.",
     overview:
       "This area explores earth resources alongside the environmental systems and decisions connected to their use and stewardship.",
-    image:
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "A quiet mountain lake surrounded by forested terrain",
+    image: "/images/resources-environment.jpg",
+    imageAlt: "Karst mountains rising above fields and a village",
     theme: "Water · Land · Environmental systems",
     objectives: [
       "Understand connections between geological resources and environments.",
@@ -200,6 +205,7 @@ export const newsItems = [
 ];
 
 export const navItems = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Research", href: "/research" },
   { label: "Education & Activities", href: "/education" },
@@ -209,5 +215,4 @@ export const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const homeImage =
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=90";
+export const homeImage = siteImages.hero;

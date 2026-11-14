@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ActivityBrowser } from "@/components/activity-browser";
 import { PageHero } from "@/components/page-hero";
 import { Container, SectionHeading } from "@/components/ui";
-import { conferences, homeImage } from "@/data/site";
+import { conferences, siteImages } from "@/data/site";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ export default function ConferencesPage() {
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Mountain ridgelines in an open landscape"
+        image={siteImages.conferences}
+        imageAlt="Illustrative strata visible in an exposed rock face"
         eyebrow="Conferences"
         title="Ideas move forward when we meet."
         description="Explore current listings and archived conferences. Sample records are separated by date and are not confirmed MIEPS events."

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ButtonLink, Container, Eyebrow, SectionHeading, SampleLabel } from "@/components/ui";
-import { homeImage } from "@/data/site";
+import { siteImages } from "@/data/site";
 import { PageHero } from "@/components/page-hero";
 
 export const metadata: Metadata = {
@@ -20,8 +20,8 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Mountain terrain beneath a broad sky"
+        image={siteImages.myanmar}
+        imageAlt="Illustrative view of a lake village and mountains in Shan State"
         eyebrow="About the institute"
         title="Science grounded in curiosity about our planet."
         description="An introduction to the Myanmar Institute of Earth and Planetary Sciences, with institutional details kept honest and ready to be completed."

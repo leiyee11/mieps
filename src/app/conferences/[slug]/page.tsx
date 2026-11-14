@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/page-hero";
 import { ButtonLink, Container, Eyebrow, SampleLabel } from "@/components/ui";
-import { conferences, homeImage } from "@/data/site";
+import { conferences, siteImages } from "@/data/site";
 import { formatDate } from "@/lib/dates";
 
 export function generateStaticParams() {
@@ -35,8 +35,8 @@ export default async function ConferenceDetailPage({
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Mountain terrain used as illustrative conference imagery"
+        image={siteImages.conferences}
+        imageAlt="Illustrative strata visible in an exposed rock face"
         eyebrow="Conference listing · Sample"
         title={event.title}
         description={event.description}

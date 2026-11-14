@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import {
   activities,
   conferences,
   homeImage,
   newsItems,
   researchAreas,
+  siteImages,
 } from "@/data/site";
 import { isUpcoming, formatDate } from "@/lib/dates";
 import {
@@ -40,7 +41,7 @@ export default function HomePage() {
         <div className="hero-image">
           <Image
             src={homeImage}
-            alt="Mountain ridgelines rising beneath a wide open sky"
+            alt="Illustrative limestone formations in a dramatic karst landscape"
             fill
             priority
             sizes="100vw"
@@ -74,8 +75,8 @@ export default function HomePage() {
           <Reveal className="intro-visual">
             <div className="intro-visual-main">
               <Image
-                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85"
-                alt="Aerial view across a green mountain landscape"
+                src={siteImages.myanmar}
+                alt="Illustrative aerial view of a lake village beneath Shan State mountains"
                 fill
                 sizes="(max-width: 760px) 90vw, 45vw"
               />
@@ -139,15 +140,15 @@ export default function HomePage() {
           <Reveal className="feature-grid">
             <div className="feature-image">
               <Image
-                src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1500&q=85"
-                alt="Patterns of water meeting a rugged coastline"
+                src="/images/rock-strata.jpg"
+                alt="Illustrative layers of sedimentary rock exposed along a cliff"
                 fill
                 sizes="(max-width: 760px) 100vw, 55vw"
               />
             </div>
             <div className="feature-copy">
               <span className="feature-meta">Editorial feature · Sample content</span>
-              <h3>Earth’s hidden landscapes, seen from a new perspective.</h3>
+              <h3>The surface is a record of Earth’s change.</h3>
               <p>
                 This space is reserved for a verified research story, including
                 its authors, methods, findings, and publication date. No
@@ -173,21 +174,16 @@ export default function HomePage() {
             />
             <ArrowLink href="/education" light>Explore education</ArrowLink>
           </div>
-          <div className="event-list">
-            {activities.slice(0, 2).map((activity) => (
-              <div className="event-row" key={activity.slug}>
-                <div className="event-date">{formatDate(activity.date)}</div>
-                <div className="event-copy">
-                  <h3>{activity.title}<span className="event-status">Sample</span></h3>
-                  <p>{activity.category} · {activity.location}</p>
-                </div>
-                <Link className="event-link" href={`/activities/${activity.slug}`}>
-                  Details <ArrowUpRight size={15} aria-hidden="true" />
-                </Link>
-              </div>
+          <div className="learning-paths">
+            {["Courses & training", "Field learning", "Public lectures"].map((item, index) => (
+              <Link className="learning-path" href="/education" key={item}>
+                <span>0{index + 1}</span>
+                <strong>{item}</strong>
+                <ArrowRight size={17} aria-hidden="true" />
+              </Link>
             ))}
           </div>
-          <p className="event-note">Dates and programs above are mock records for layout demonstration, not confirmed MIEPS opportunities.</p>
+          <p className="event-note">These are learning categories from the project brief; no MIEPS program details have been confirmed.</p>
         </Container>
       </section>
 
@@ -257,13 +253,16 @@ export default function HomePage() {
             />
             <ArrowLink href="/contact">Share an inquiry</ArrowLink>
           </div>
-          <div className="news-grid">
+          <div className="news-list">
             {newsItems.map((item, index) => (
-              <Reveal className="news-card" delay={index * 0.06} key={item.title}>
-                <Eyebrow>{item.category}</Eyebrow>
-                <SampleLabel>Content placeholder</SampleLabel>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+              <Reveal className="news-item" delay={index * 0.06} key={item.title}>
+                <span className="news-index">0{index + 1}</span>
+                <div className="news-copy">
+                  <Eyebrow>{item.category}</Eyebrow>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <SampleLabel>Content placeholder</SampleLabel>
+                </div>
                 <ArrowLink href={item.href}>Explore</ArrowLink>
               </Reveal>
             ))}

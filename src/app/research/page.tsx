@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { ArrowLink, Container, ResearchCard, SectionHeading } from "@/components/ui";
-import { homeImage, researchAreas } from "@/data/site";
+import { researchAreas, siteImages } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -13,8 +13,8 @@ export default function ResearchPage() {
   return (
     <>
       <PageHero
-        image={homeImage}
-        imageAlt="Mountain ridges and highland terrain"
+        image={siteImages.research}
+        imageAlt="Illustrative geological fissure through a rocky landscape"
         eyebrow="Research"
         title="Questions about Earth, explored together."
         description="Explore the four research themes named in the project brief. Specific MIEPS projects, publications, and researchers will be added when verified."
